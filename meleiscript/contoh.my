@@ -1,4 +1,4 @@
-print "shitty pokemon"
+print "good pokemon"
 if ($nama == "azmi"){
 print "holla"
 }
