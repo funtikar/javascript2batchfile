@@ -1,0 +1,4 @@
+print "shitty pokemon"
+if ($nama == "azmi"){
+print "holla"
+}
