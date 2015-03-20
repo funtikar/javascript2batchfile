@@ -15,7 +15,7 @@ def lexer(argi):
 	data = list(argi)
 	for aksara in data:
 		buffa = buffa + aksara
-		#print buffa
+		print buffa
 		if (buffa == "print"):
 			tokens.append("PRINT")
 			#print "[debugging] it was a print"
@@ -42,6 +42,11 @@ def lexer(argi):
 		if (buffa == "<"):
 			tokens.append("LTHAN")
 			buffa = ""			
+		if (aksara == "(" and f_state == 2):
+			tokens.append(buffa[:-1])
+			tokens.append("L_CURVE")
+			buffa = ""
+			f_state = 0
 		if (buffa == "("):
 			tokens.append("L_CURVE")
 			buffa = ""
@@ -74,9 +79,9 @@ def lexer(argi):
 			buffa = ""
 			nvar_state = 0
 		elif (aksara == " " and f_state == 1):
-			tokens.append("F_NAME" + buffa[1:])
+			tokens.append("FUNC")
 			buffa = ""
-			nvar_state = 0
+			f_state = 2
 		if (aksara == "\n"):
 			buffa = ""
 def utama():
