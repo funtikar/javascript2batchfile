@@ -1,0 +1,8 @@
+print "good pokemon"
+if ($nama >= "azmi"){
+print "holla"
+}
+
+function show(%nomba){
+print %nomba
+}
