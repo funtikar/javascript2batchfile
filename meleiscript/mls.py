@@ -134,7 +134,7 @@ def parser(toki):
 	f.close()		
 def utama():
 	lexer(buka("contoh.my"))
-	print tokens
+	print(tokens)
 	parser(tokens)
 	
 	
@@ -142,3 +142,4 @@ def utama():
 #lexer(buka(argv[1]))
 
 utama()
+
