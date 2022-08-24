@@ -1,9 +1,9 @@
-from sys import *
+
 
 tokens = []
-def buka(argi):
-	buff = open(argi,"r").read()
-	return buff
+#def buka(argi):
+#	buff = open(argi,"r").read()
+#	return buff
 
 def lexer(argi):
 	buffa = ""
@@ -133,13 +133,12 @@ def parser(toki):
 			f.write("\n")
 	f.close()		
 def utama():
-	lexer(buka("contoh.my"))
+	lexer('$namee = "azmi"')
 	print(tokens)
-	parser(tokens)
+	#parser(tokens)
 	
 	
 #supposed to be this one down here
 #lexer(buka(argv[1]))
 
 utama()
-
